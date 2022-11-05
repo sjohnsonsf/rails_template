@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+    app-container:
+        container_name: rails
+        stdin_open: true
+        tty: true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        networks:
+            - default
+networks:
+    default:
+        driver: bridge
